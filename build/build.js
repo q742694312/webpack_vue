@@ -21829,6 +21829,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
 
 //引入相关模块
 var $ = __webpack_require__(1);
@@ -21839,6 +21841,15 @@ var $ = __webpack_require__(1);
         return {
             courseList: []
         };
+    },
+    directives: {
+        go: {
+            inserted: function (el) {
+                el.onclick = function () {
+                    alert(this.innerText);
+                };
+            }
+        }
     },
     mounted: function () {
         //获取左侧课程数据
@@ -21917,12 +21928,16 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     methods: {
         get: function () {
             this.$http.get('./model/computeData.php?a=' + this.a + '&b=' + this.b).then(function (result) {
+                //以下两点对于get和post传参都是一样的：
+                //如果后端返回的是字符串，就用result.bodyText来接收；
+                //如果后端返回的是json，就用result.data来接收。
                 console.log(result.bodyText);
             }, function (result) {
                 console.log(result);
             });
         },
         post: function () {
+            //通过post传参，需要加第三个参数{emulateJSON:true}
             this.$http.post('./model/computeData.php', { a: this.a, b: this.b }, { emulateJSON: true }).then(function (result) {
                 console.log(result.bodyText);
             }, function (result) {
@@ -24211,11 +24226,20 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }))])
   }))]), _vm._v(" "), _c('div', {
     staticClass: "mRight"
-  }, [_vm._m(0), _vm._v(" "), _c('router-view')], 1)])
-},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
+  }, [_c('div', {
     staticClass: "condition"
-  }, [_c('ul', [_c('li', [_vm._v("1")]), _vm._v(" "), _c('li', [_vm._v("2")]), _vm._v(" "), _c('li', [_vm._v("3")])])])
+  }, [_vm._m(0), _vm._v(" "), _c('h1', [_vm._v("接收路由参数："), _c('span', {
+    staticStyle: {
+      "color": "red"
+    }
+  }, [_vm._v(_vm._s(_vm.$route.params.math))])]), _vm._v(" "), _c('button', {
+    directives: [{
+      name: "go",
+      rawName: "v-go"
+    }]
+  }, [_vm._v("自定义指令")])]), _vm._v(" "), _c('router-view')], 1)])
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('ul', [_c('li', [_vm._v("1")]), _vm._v(" "), _c('li', [_vm._v("2")]), _vm._v(" "), _c('li', [_vm._v("3")])])
 }]}
 module.exports.render._withStripped = true
 if (false) {

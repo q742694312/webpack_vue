@@ -26,6 +26,8 @@
                     <li>2</li>
                     <li>3</li>
                 </ul>
+                <h1>接收路由参数：<span style="color: red;">{{$route.params.math}}</span></h1>
+                <button v-go>自定义指令</button>
             </div>
             <router-view></router-view>
         </div>
@@ -40,6 +42,15 @@
         data : function(){
             return {
                 courseList : []
+            }
+        },
+        directives : {
+            go : {
+                inserted : function(el){
+                    el.onclick = function(){
+                        alert(this.innerText);
+                    };
+                }
             }
         },
         mounted : function(){
