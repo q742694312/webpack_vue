@@ -1,0 +1,29 @@
+{
+  "name": "webpack_vue",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "latest",
+    "babel-loader": "latest",
+    "babel-preset-es2015": "latest",
+    "css-loader": "latest",
+    "file-loader": "latest",
+    "jquery": "^3.2.1",
+    "style-loader": "latest",
+    "svg-url-loader": "^2.0.2",
+    "url-loader": "^0.5.8",
+    "vue": "latest",
+    "vue-loader": "latest",
+    "vue-resource": "latest",
+    "vue-router": "latest",
+    "vue-template-compiler": "latest",
+    "webpack": "latest",
+    "webpack-dev-server": "latest"
+  }
+}

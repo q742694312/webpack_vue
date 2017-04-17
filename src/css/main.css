@@ -1,0 +1,147 @@
+@charset "utf8";
+
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    font-family: Microsoft YaHei,\\5FAE软雅黑,Arial,Tahoma,STHeiti,Helvetica,\[体,sans-serif;
+    font-size: 14px;
+    background-color: #eff0f4;
+}
+li{
+    list-style:none;
+}
+a{
+    text-decoration:none;
+}
+img{
+    border:none;
+}
+.allTable{
+    padding:10px;
+    background-color:#fff;
+}
+td{
+    height:30px;
+    line-height:30px;
+    border:1px solid #ccc;
+    padding:0 10px;
+}
+.clearfix:after{
+    display:block;
+    content:'';
+    height:0;
+    clear:both;
+    overflow:hidden;
+}
+.clearfix{
+    zoom:1;
+}
+.active{
+    color:#65cea7;
+}
+/*header*/
+.header{
+    background-color:#fff;
+    box-shadow: 3px 3px 3px #ccc;
+    margin-bottom:20px;
+}
+.header-wrap{
+    width:100%;
+    max-width:1200px;
+    height:60px;
+    margin:0 auto;
+}
+.logo{
+    width:144px;
+    height:40px;
+    padding-top:10px;
+    float:left;
+}
+.header-nav{
+    float:left;
+}
+.header-nav a{
+    display:inline-block;
+    height:60px;
+    line-height:60px;
+    padding:0 10px;
+    color:#000;
+}
+.header-nav a:hover{
+    color:#65cea7;
+}
+.options{
+    float:right;
+    position:relative;
+}
+.options .header-img{
+    padding-top:10px;
+    cursor:pointer;
+}
+.options .header-img img{
+    border-radius:50%;
+    vertical-align: middle;
+}
+.options .header-img span{
+    display:inline-block;
+    height:40px;
+    line-height:40px;
+}
+.options .personal-choose{
+    position:absolute;
+    z-index:99;
+    width:100%;
+    display:none;
+    background-color:#65cea7;
+    color:#fff;
+}
+.options .personal-choose ul li{
+    padding:10px 0 10px 10px;
+}
+.options .personal-choose ul li:hover{
+    background-color:#424f63;
+    cursor:pointer;
+}
+
+/*main*/
+.main{
+    width:100%;
+    max-width:1200px;
+    background-color:#fff;
+    overflow:hidden;
+    margin:0 auto;
+}
+.main .mLeft{
+    padding-top:60px;
+    width:230px;
+    float:left;
+    border-right:1px solid #ccc;
+    font-size:12px;
+}
+.main .mLeft ul li{
+    line-height:30px;
+    cursor:pointer;
+}
+.main .mLeft ul li span:hover{
+    color:#65cea7;
+}
+.main .mLeft ul li a.default{
+    color:#000;
+}
+.main .mLeft ul li ul{
+    display:none;
+}
+.main .mLeft .level1{
+    margin-left:10px;
+}
+.main .mLeft .level2{
+    margin-left:20px;
+}
+.main .mLeft .level3{
+    margin-left:30px;
+}
+.main .mRight{
+    float:left;
+}
