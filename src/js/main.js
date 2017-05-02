@@ -12,12 +12,14 @@ import knowledge from '../../components/knowledge.vue'
 import group from '../../components/group.vue'
 import timeTable from '../../components/timeTable.vue'
 import fileDetail from '../../components/fileDetail.vue'
+import loading from '../../myComponents/loading/index.js'
 
 window.$ = require('jquery');
 
 //通过全局方法 Vue.use() 使用插件:
 Vue.use(VueRouter);
 Vue.use(VueResource);
+Vue.use(loading);
 
 var router = new VueRouter({
     routes : [

@@ -37,6 +37,7 @@
         <div class="main">
             <router-view></router-view>
         </div>
+        <loading></loading>
     </div>
 </template>
 <script type="text/javascript">
