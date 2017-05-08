@@ -4,21 +4,24 @@
         <div class="allTable">
             <table cellpadding="0" cellspacing="0">
                 <thead>
-                <tr>
-                    <td>ID</td>
-                    <td>用户名</td>
-                    <td>邮箱</td>
-                </tr>
+                    <tr>
+                        <td>ID</td>
+                        <td>用户名</td>
+                        <td>邮箱</td>
+                    </tr>
                 </thead>
                 <tbody>
-                <tr v-for="(v, k) in userList">
-                    <td>{{v.id}}</td>
-                    <td>{{v.uname}}</td>
-                    <td>{{v.email}}</td>
-                </tr>
+                    <tr v-for="(v, k) in userList">
+                        <td>{{v.id}}</td>
+                        <td>{{v.uname}}</td>
+                        <td>{{v.email}}</td>
+                    </tr>
                 </tbody>
             </table>
         </div>
+        <hr />
+        <loading></loading>
+        <monday></monday>
     </div>
 </template>
 <script type="text/javascript">

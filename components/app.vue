@@ -17,7 +17,7 @@
                     <router-link to="/knowledge">知识点管理</router-link>
                     <router-link to="/group">群组管理</router-link>
                     <router-link to="/timeTable">课程表</router-link>
-                    {{math}}
+                    <router-link to="/vuex">vuex</router-link>
                 </div>
                 <!--options-->
                 <div class="options" v-on:click="checkOptions">
@@ -37,7 +37,6 @@
         <div class="main">
             <router-view></router-view>
         </div>
-        <loading></loading>
     </div>
 </template>
 <script type="text/javascript">

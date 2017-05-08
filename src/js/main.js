@@ -12,14 +12,19 @@ import knowledge from '../../components/knowledge.vue'
 import group from '../../components/group.vue'
 import timeTable from '../../components/timeTable.vue'
 import fileDetail from '../../components/fileDetail.vue'
+import vuexComponent from '../../components/vuex.vue'
 import loading from '../../myComponents/loading/index.js'
+import monday from '../../myComponents/monday/index.js'
+import store from './store.js'
 
 window.$ = require('jquery');
+window.Event = new Vue();
 
 //通过全局方法 Vue.use() 使用插件:
 Vue.use(VueRouter);
 Vue.use(VueResource);
 Vue.use(loading);
+Vue.use(monday);
 
 var router = new VueRouter({
     routes : [
@@ -54,11 +59,16 @@ var router = new VueRouter({
         {
             path : '/timeTable',
             component : timeTable
+        },
+        {
+            path : '/vuex',
+            component : vuexComponent
         }
     ]
 });
 
 new Vue({
+    store : store,
     el : '#wrap',
     render : function(createElement){
         return createElement(app);
