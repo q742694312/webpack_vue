@@ -15,7 +15,8 @@ import fileDetail from '../../components/fileDetail.vue'
 import vuexComponent from '../../components/vuex.vue'
 import loading from '../../myComponents/loading/index.js'
 import monday from '../../myComponents/monday/index.js'
-import store from './store.js'
+/*import store from './store.js'*/
+import store from './store/index.js'
 
 window.$ = require('jquery');
 window.Event = new Vue();
